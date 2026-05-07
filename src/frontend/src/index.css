@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "General Sans";
+    --font-body: "Lora";
+    --font-mono: "GeistMono";
+    --radius: 0.5rem;
+
+    --background: 0.99 0 0;
+    --foreground: 0.18 0.015 280;
+    --card: 0.98 0.005 0;
+    --card-foreground: 0.18 0.015 280;
+    --popover: 0.97 0.005 0;
+    --popover-foreground: 0.18 0.015 280;
+
+    --primary: 0.62 0.22 30;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.45 0.24 260;
+    --secondary-foreground: 0.98 0 0;
+    --muted: 0.93 0.01 0;
+    --muted-foreground: 0.45 0.01 280;
+
+    --accent: 0.62 0.22 30;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.21 22;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.88 0.01 0;
+    --input: 0.94 0.01 0;
+    --ring: 0.45 0.24 260;
+
+    --chart-1: 0.62 0.22 30;
+    --chart-2: 0.45 0.24 260;
+    --chart-3: 0.72 0.15 140;
+    --chart-4: 0.55 0.18 15;
+    --chart-5: 0.68 0.19 45;
+
+    --sidebar: 0.96 0.01 0;
+    --sidebar-foreground: 0.25 0.015 280;
+    --sidebar-primary: 0.62 0.22 30;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.45 0.24 260;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.88 0.01 0;
+    --sidebar-ring: 0.62 0.22 30;
+  }
+
+  .dark {
+    --background: 0.145 0 0;
+    --foreground: 0.95 0 0;
+    --card: 0.18 0 0;
+    --card-foreground: 0.95 0 0;
+    --popover: 0.22 0 0;
+    --popover-foreground: 0.95 0 0;
+
+    --primary: 0.7 0.22 30;
+    --primary-foreground: 0.145 0 0;
+
+    --secondary: 0.65 0.24 260;
+    --secondary-foreground: 0.95 0 0;
+    --muted: 0.22 0 0;
+    --muted-foreground: 0.55 0 0;
+
+    --accent: 0.7 0.22 30;
+    --accent-foreground: 0.145 0 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.145 0 0;
+
+    --border: 0.28 0 0;
+    --input: 0.28 0 0;
+    --ring: 0.65 0.24 260;
+
+    --chart-1: 0.62 0.22 30;
+    --chart-2: 0.45 0.24 260;
+    --chart-3: 0.72 0.15 140;
+    --chart-4: 0.55 0.18 15;
+    --chart-5: 0.68 0.19 45;
+
+    --sidebar: 0.18 0 0;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.7 0.22 30;
+    --sidebar-primary-foreground: 0.145 0 0;
+    --sidebar-accent: 0.65 0.24 260;
+    --sidebar-accent-foreground: 0.95 0 0;
+    --sidebar-border: 0.28 0 0;
+    --sidebar-ring: 0.7 0.22 30;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/fonts/Lora.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeistMono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.4s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulsSubtle 2s ease-in-out infinite;
+  }
+
+  .shadow-card {
+    @apply shadow-md;
+  }
+
+  .shadow-lift {
+    @apply shadow-sm hover:shadow-lg transition-shadow;
+  }
+
+  .badge-primary {
+    @apply inline-flex items-center px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold;
+  }
+
+  .badge-secondary {
+    @apply inline-flex items-center px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold;
+  }
+
+  .input-travel {
+    @apply w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 active:scale-95 transition-smooth;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:opacity-90 active:scale-95 transition-smooth;
+  }
+
+  .button-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary bg-background rounded-lg hover:bg-primary hover:text-primary-foreground active:scale-95 transition-smooth;
+  }
+
+  .card-travel {
+    @apply bg-card rounded-xl border border-border shadow-card overflow-hidden hover:shadow-lg transition-shadow;
+  }
+
+  .section-header {
+    @apply text-4xl md:text-5xl font-bold text-foreground font-display mb-2;
+  }
+
+  .section-subheader {
+    @apply text-lg md:text-xl text-muted-foreground font-body;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* iPhone 15 Pro frame mockup */
+  .iphone-frame {
+    @apply relative mx-auto flex items-center justify-center;
+    width: 430px;
+    height: 932px;
+    padding: 12px;
+    background: linear-gradient(160deg, #3a3a3c 0%, #1c1c1e 50%, #2a2a2c 100%);
+    border-radius: 54px;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      0 0 0 2px #0a0a0a,
+      0 30px 80px -10px rgba(0, 0, 0, 0.5),
+      0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .iphone-frame::before {
+    content: none;
+  }
+
+  .iphone-frame::after {
+    content: none;
+  }
+
+  .iphone-screen {
+    @apply relative bg-background flex flex-col overflow-hidden;
+    width: 406px;
+    height: 908px;
+    border-radius: 44px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  }
+
+  /* Status bar safe area */
+  .iphone-status-bar {
+    @apply w-full bg-background px-6 flex justify-between items-center text-xs font-semibold text-foreground flex-shrink-0;
+    height: 58px;
+    padding-top: 20px;
+    z-index: 40;
+  }
+
+  /* Main content area with bottom nav */
+  .iphone-content {
+    @apply flex-1 overflow-y-auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Bottom tab navigation */
+  .iphone-tabbar {
+    @apply w-full bg-card border-t border-border flex justify-around items-start flex-shrink-0;
+    height: 84px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    border-bottom-left-radius: 44px;
+    border-bottom-right-radius: 44px;
+    position: relative;
+    z-index: 50;
+  }
+
+  .iphone-tab {
+    @apply flex flex-col items-center justify-start pt-1 px-3 rounded-lg transition-colors cursor-pointer;
+    min-width: 60px;
+    min-height: 44px;
+    color: oklch(var(--muted-foreground));
+  }
+
+  .iphone-tab.active {
+    color: #ff6b35;
+  }
+
+  .iphone-tab svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+  }
+
+  .iphone-tab-label {
+    @apply text-xs font-medium leading-none;
+  }
+
+  /* Mobile-optimized touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Mobile-first card spacing */
+  .mobile-container {
+    @apply px-4 py-4;
+  }
+
+  .mobile-section {
+    @apply mb-6 last:mb-24;
+  }
+
+  .mobile-button-primary {
+    @apply w-full px-4 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 active:scale-95 transition-smooth touch-target;
+  }
+
+  .mobile-input {
+    @apply w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent touch-target text-base;
+  }
+
+  .mobile-card {
+    @apply bg-card rounded-2xl border border-border shadow-card overflow-hidden hover:shadow-lg transition-shadow;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}

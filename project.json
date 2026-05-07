@@ -1,0 +1,26 @@
+{
+  "overview": "Voyagr is a complete travel booking app mockup displayed inside a realistic iPhone frame. It covers all flight and hotel booking flows with Orange and Blue theme, bottom tab navigation, and mobile-first UX.",
+  "features": [
+    "iPhone frame mockup with Dynamic Island and status bar",
+    "Bottom tab navigation (Home, Flights, Hotels, Trips, Profile)",
+    "Flight search with filters and one-way/round-trip modes",
+    "Hotel search with grid view and filters",
+    "Hotel detail page with gallery and room selection",
+    "4-step booking checkout",
+    "My Trips with upcoming and past bookings",
+    "User profile with loyalty points",
+    "Orange #FF6B35 and Blue #1B4FD8 theme",
+    "Fully interactive with realistic mock data"
+  ],
+  "category": "travel",
+  "tags": [
+    "travel",
+    "mobile",
+    "iphone",
+    "mockup",
+    "flights",
+    "hotels",
+    "booking"
+  ],
+  "last_updated": "2026-05-07T20:11:50.482Z"
+}

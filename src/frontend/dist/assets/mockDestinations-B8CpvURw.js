@@ -1,0 +1,88 @@
+const mockDestinations = [
+  {
+    id: "dest-001",
+    city: "Dubai",
+    country: "UAE",
+    code: "DXB",
+    image: "/assets/generated/dest-dubai.jpg",
+    tagline: "City of Gold & Skyline Dreams",
+    flightFrom: "$849",
+    popularFor: ["Shopping", "Luxury", "Architecture"],
+    badge: "Trending"
+  },
+  {
+    id: "dest-002",
+    city: "Bali",
+    country: "Indonesia",
+    code: "DPS",
+    image: "/assets/generated/dest-bali.jpg",
+    tagline: "Island of the Gods",
+    flightFrom: "$720",
+    popularFor: ["Beaches", "Temples", "Wellness"],
+    badge: "Hot Deal"
+  },
+  {
+    id: "dest-003",
+    city: "Paris",
+    country: "France",
+    code: "CDG",
+    image: "/assets/generated/dest-paris.jpg",
+    tagline: "The City of Light & Romance",
+    flightFrom: "$620",
+    popularFor: ["Art", "Cuisine", "Fashion"]
+  },
+  {
+    id: "dest-004",
+    city: "Tokyo",
+    country: "Japan",
+    code: "NRT",
+    image: "/assets/generated/dest-tokyo.jpg",
+    tagline: "Where Tradition Meets the Future",
+    flightFrom: "$890",
+    popularFor: ["Culture", "Technology", "Cuisine"]
+  },
+  {
+    id: "dest-005",
+    city: "New York",
+    country: "USA",
+    code: "JFK",
+    image: "/assets/generated/dest-nyc.jpg",
+    tagline: "The City That Never Sleeps",
+    flightFrom: "$299",
+    popularFor: ["Broadway", "Food", "Architecture"]
+  },
+  {
+    id: "dest-006",
+    city: "Barcelona",
+    country: "Spain",
+    code: "BCN",
+    image: "/assets/generated/dest-barcelona.jpg",
+    tagline: "Gaudí, Beaches & Tapas",
+    flightFrom: "$540",
+    popularFor: ["Architecture", "Beaches", "Nightlife"]
+  },
+  {
+    id: "dest-007",
+    city: "Maldives",
+    country: "Maldives",
+    code: "MLE",
+    image: "/assets/generated/dest-maldives.jpg",
+    tagline: "Crystal Waters & Overwater Bliss",
+    flightFrom: "$1,100",
+    popularFor: ["Beaches", "Diving", "Luxury"],
+    badge: "New Routes"
+  },
+  {
+    id: "dest-008",
+    city: "Rome",
+    country: "Italy",
+    code: "FCO",
+    image: "/assets/generated/dest-rome.jpg",
+    tagline: "The Eternal City",
+    flightFrom: "$580",
+    popularFor: ["History", "Cuisine", "Art"]
+  }
+];
+export {
+  mockDestinations as m
+};
